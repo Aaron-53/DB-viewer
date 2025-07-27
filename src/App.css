@@ -1,0 +1,280 @@
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  color: #10aa50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.app-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.connection-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.connection-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.connect-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #10aa50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.connect-btn:hover:not(:disabled) {
+  background: #0d8f43;
+}
+
+.connect-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.info-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #e8f4fd;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.info-box h3 {
+  margin-top: 0;
+  color: #2563eb;
+}
+
+.info-box ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.info-box ul li {
+  margin-bottom: 0.5rem;
+}
+
+.info-box code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.info-box a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.info-box a:hover {
+  text-decoration: underline;
+}
+
+.connection-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #d4edda;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.connected {
+  color: #155724;
+  font-weight: bold;
+}
+
+.disconnect-btn {
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.disconnect-btn:hover {
+  background: #c82333;
+}
+
+.data-explorer {
+  display: flex;
+  gap: 2rem;
+  min-height: 500px;
+}
+
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #ddd;
+  padding-right: 1rem;
+}
+
+.databases-section,
+.collections-section {
+  margin-bottom: 2rem;
+}
+
+.databases-section h3,
+.collections-section h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.databases-list,
+.collections-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.databases-list li,
+.collections-list li {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.databases-list li:hover,
+.collections-list li:hover {
+  background: #f0f0f0;
+}
+
+.databases-list li.active,
+.collections-list li.active {
+  background: #10aa50;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 2rem;
+}
+
+.documents-section h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.document-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f9f9f9;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.document-card pre {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.empty-state,
+.welcome-state {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.welcome-state h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+  .data-explorer {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+  
+  .main-content {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+  
+  .documents-grid {
+    grid-template-columns: 1fr;
+  }
+}
